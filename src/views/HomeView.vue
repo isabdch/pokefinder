@@ -1,17 +1,25 @@
-<script setup lang="ts">
+<script setup>
 import { storeToRefs } from "pinia";
 import { ref } from "vue";
+
 import { usePokemonsStore } from "../stores/pokemons";
 
-const pokemonsStore = usePokemonsStore();
-const text = ref("");
+import InputComponent from "../components/InputComponent.vue";
+import LoadingOverlayComponent from "../components/LoadingOverlayComponent.vue";
 
-const { error } = storeToRefs(pokemonsStore);
+const text = ref("");
+const pokemonsStore = usePokemonsStore();
+
+const { error, loading } = storeToRefs(pokemonsStore);
 const { getApiData } = pokemonsStore;
 
 function fetchPokemons() {
-  getApiData(text.value);
-  text.value = "";
+  if (text.value.trim()) {
+    getApiData(text.value);
+    text.value = "";
+  } else {
+    error.value = "You have to enter a valid value"
+  }
 }
 </script>
 
@@ -20,35 +28,29 @@ function fetchPokemons() {
     <div class="search-box">
       <h2>Search for Pokemons!</h2>
 
-      <div class="search-box__input-wrapper">
-        <input v-model="text" type="text" placeholder="Search..." />
-        <button @click="fetchPokemons">
-          <v-icon name="hi-search" />
-        </button>
-      </div>
+      <InputComponent v-model:text="text" @fetchPokemons="fetchPokemons" />
 
-      <p :class="error ? 'shown' : ''">{{ error ? error : "PokeFinder" }}</p>
+      <p :class="error != '' ? 'shown' : ''">{{ error != '' ? error : "&nbsp;" }}</p>
     </div>
   </main>
+
+  <LoadingOverlayComponent :loading="loading" />
 </template>
 
 <style scoped lang="scss">
 @import "../styles/globalStyles.scss";
 
 main {
-  @include sizeUtil(100%, 100vh);
   @include flexUtil(row, center, center);
-  background: $orange url("../assets/pokemon-background.png") no-repeat center;
-  background-size: cover;
-  padding: 20px;
 
   .search-box {
+    @include flexUtil(column, center, center);
     @include sizeUtil(100%, 100%);
     @include maxSizeUtil(650px, 350px);
-    @include flexUtil(column, center, center);
-    background: #ffffffbb;
+    min-height: 226px;
+    background: $white_opacity;
     backdrop-filter: blur(2px);
-    box-shadow: 1px 1px 10px #0000008c;
+    box-shadow: 1px 1px 10px $black-opacity;
     padding: 20px;
     border: 4px solid $white;
     border-radius: 10px;
@@ -63,52 +65,6 @@ main {
 
       @media screen and (max-width: 675px) {
         font-size: 32px;
-      }
-    }
-
-    .search-box__input-wrapper {
-      @include flexUtil(row);
-      width: 100%;
-      max-width: 450px;
-      border-radius: 5px;
-      margin-bottom: 10px;
-
-      &:focus-within {
-        outline: 2px solid $blue_green;
-      }
-
-      input {
-        flex: 1;
-        border-radius: 5px 0 0 5px;
-        padding: 12px;
-        border: 0;
-        outline: 0;
-
-        &::placeholder {
-          color: $light_gray;
-          font-style: italic;
-          font-weight: 500;
-        }
-      }
-
-      button {
-        background: $blue_green;
-        width: 50px;
-        border-radius: 0 5px 5px 0;
-        outline: 0;
-        transition: 0.2s;
-
-        svg {
-          color: $white;
-        }
-
-        &:hover {
-          background: $white;
-
-          svg {
-            color: $blue_green;
-          }
-        }
       }
     }
 

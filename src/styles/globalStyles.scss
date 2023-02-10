@@ -6,8 +6,10 @@ $orange: #f4a261;
 $dark_orange: #e76f51;
 $darker_orange: #a4513d;
 $white: #ffffff;
+$white_opacity: #ffffffc5;
 $light_gray: #cbcbcb;
 $black: #000000;
+$black-opacity: #0000008c;
 
 // mixins
 @mixin sizeUtil($width: "", $height: "") {
@@ -35,7 +37,24 @@ $black: #000000;
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  @include sizeUtil(100%, 100vh);
+  background: $orange url("../assets/pokemon-background.png") no-repeat center;
+  background-size: cover;
+}
+
+main {
+  @include sizeUtil(100%, 100vh);
+  padding: 20px;
+}
+
 button {
   cursor: pointer;
   border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
