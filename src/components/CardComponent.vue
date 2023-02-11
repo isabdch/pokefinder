@@ -35,7 +35,7 @@ export default {
   border-radius: 10px;
   position: relative;
   text-decoration: none;
-  box-shadow: 1px 1px 10px $black-opacity;
+  box-shadow: 1px 1px 10px $black_opacity;
   cursor: pointer;
 
   &::after {

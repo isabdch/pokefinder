@@ -52,7 +52,7 @@ main {
     min-height: 226px;
     background: $white_opacity;
     backdrop-filter: blur(2px);
-    box-shadow: 1px 1px 10px $black-opacity;
+    box-shadow: 1px 1px 10px $black_opacity;
     padding: 20px;
     border: 4px solid $white;
     border-radius: 10px;

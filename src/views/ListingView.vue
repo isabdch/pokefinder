@@ -67,7 +67,7 @@ onMounted(() => {
   margin-top: 40px;
 
   .search-box__input-wrapper {
-    box-shadow: 1px 1px 10px $black-opacity;
+    box-shadow: 1px 1px 10px $black_opacity;
   }
 
   p {
