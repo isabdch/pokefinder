@@ -1,40 +1,110 @@
-# pokefinder
+# PokeFinder
 
-This template should help get you started developing with Vue 3 in Vite.
+![](https://img.shields.io/github/forks/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
+![](https://img.shields.io/github/languages/count/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
+![](https://img.shields.io/github/repo-size/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
+![](https://img.shields.io/github/issues/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
+![](https://img.shields.io/github/stars/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
+![](https://img.shields.io/github/license/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
 
-## Recommended IDE Setup
+## [SITE HERE](https://pokefinder-isabdch.netlify.app/)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![](/public/gif.gif)
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## 📖 Table of Contents
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+- [Project Description](#project-description)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Install and build this project in Local Environment](#install-and-build-this-project-in-local-environment)
+- [Status](#status)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+<br />
 
-## Customize configuration
+## ✏️ Project Description
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+A fully responsive website for searching for pokemons. Consuming PokeAPI.
 
-## Project Setup
+<br />
 
-```sh
-npm install
-```
+## 🖥️ Technologies
 
-### Compile and Hot-Reload for Development
+- ### JavaScript;
 
-```sh
-npm run dev
-```
+- ### Vue.js;
 
-### Type-Check, Compile and Minify for Production
+- ### Axios;
 
-```sh
-npm run build
-```
+- ### SCSS;
+
+<br />
+
+## 🥇 Features
+
+The user can:
+
+- Search for pokemons and their evolutions;
+- View pokemons informations.
+
+<br />
+
+## 🚀 Install and build this project in Local Environment
+
+- Installation
+  - Clone or download this repository;
+  - In the project folder, run the code below to install all dependencies
+    ```node
+    npm install
+    ``` 
+
+- Build
+    - Create a repository on GitHub;
+    - Run the following code:
+        ```node
+        git init
+        ````
+        ```node
+        git status
+        ````
+        ```node
+        git add .
+        ````
+        ```node
+        git commit -m "my first commit"
+        ````
+        ```node
+        git branch -M main
+        ````
+        ```node
+        git remote add origin <your_repository_name>
+        ````
+         ```node
+        git push -u origin main
+        ````
+    - Then to finally build the project run:
+        ```node
+        npm run build
+        ````
+        ```node
+        git add dist -f    
+        ````
+        ```node
+        git commit -m "adding dist"
+        ````
+        ```node
+        git subtree push --prefix dist origin gh-pages
+        ```
+        And that's it!
+
+<br />
+
+## ⏱️ Status
+
+This project is finished.
+
+---
+
+Made with 💜 by Isabelle Brandão 👋 [See my LinkedIn](https://www.linkedin.com/in/isabelle-brand%C3%A3o-5645551a8/)
+
