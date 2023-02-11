@@ -5,7 +5,6 @@
 ![](https://img.shields.io/github/repo-size/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
 ![](https://img.shields.io/github/issues/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
 ![](https://img.shields.io/github/stars/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
-![](https://img.shields.io/github/license/isabdch/pokefinder?color=%23ff0000&style=for-the-badge)
 
 ## [SITE HERE](https://pokefinder-isabdch.netlify.app/)
 
