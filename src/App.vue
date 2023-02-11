@@ -5,7 +5,7 @@ import { RouterView } from "vue-router";
 <template>
   <RouterView />
 
-  <a href="https://github.com/isabdch">isabdch</a>
+  <a target="_blank" href="https://github.com/isabdch">isabdch</a>
 </template>
 
 <style scoped lang="scss">
