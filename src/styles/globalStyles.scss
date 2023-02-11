@@ -8,6 +8,7 @@ $darker_orange: #a4513d;
 $white: #ffffff;
 $white_opacity: #ffffffc5;
 $light_gray: #cbcbcb;
+$gray_opacity: #5957576f;
 $black: #000000;
 $black-opacity: #0000008c;
 
@@ -35,6 +36,24 @@ $black-opacity: #0000008c;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  scrollbar-color: red transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 0 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    background-clip: padding-box;
+  }
 }
 
 body {
@@ -46,6 +65,7 @@ body {
 main {
   @include sizeUtil(100%, 100vh);
   padding: 20px;
+  overflow-y: auto;
 }
 
 button {
@@ -58,3 +78,4 @@ button {
   max-width: 1080px;
   margin: 0 auto;
 }
+

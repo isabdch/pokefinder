@@ -2,14 +2,14 @@ import { createApp } from "vue";
 import { createPinia } from "pinia";
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { HiSearch } from "oh-vue-icons/icons";
+import { HiSearch, BiArrowReturnRight} from "oh-vue-icons/icons";
 
 import App from "./App.vue";
 import router from "./router";
 
 import "./styles/globalStyles.scss";
 
-addIcons(HiSearch);
+addIcons(HiSearch, BiArrowReturnRight);
 
 const app = createApp(App);
 

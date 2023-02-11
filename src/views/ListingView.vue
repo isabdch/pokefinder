@@ -1,6 +1,6 @@
 <script setup>
-import { storeToRefs } from "pinia";
 import { ref, onMounted } from "vue";
+import { storeToRefs } from "pinia";
 
 import { usePokemonsStore } from "../stores/pokemons";
 import router from "../router";

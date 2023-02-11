@@ -11,7 +11,7 @@ export default {
       () =>
         $router.push({
           name: 'details',
-          params: { id: data?.id },
+          params: { id: data?.name },
         })
     "
     class="card"
@@ -26,15 +26,25 @@ export default {
 
 .card {
   @include flexUtil(column, flex-end, center);
-  @include sizeUtil(100%, 200px);
-  max-width: 170px;
+  @include sizeUtil(100%, 300px);
+  max-width: 220px;
   background: $white_opacity;
   backdrop-filter: blur(2px);
   padding: 15px;
+  border: 2px solid red;
   border-radius: 10px;
+  position: relative;
   text-decoration: none;
   box-shadow: 1px 1px 10px $black-opacity;
   cursor: pointer;
+
+  &::after {
+    content: "";
+    @include sizeUtil(100%, 100%);
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, red 8%, #00000000 25%, #00000000 100%);
+  }
 
   &:hover {
     img {
@@ -50,11 +60,13 @@ export default {
   }
 
   p {
-    color: red;
+    color: $white;
     position: relative;
     text-transform: capitalize;
     text-align: center;
+    font-size: 18px;
     font-weight: 500;
+    z-index: 1;
   }
 }
 </style>

@@ -12,6 +12,7 @@ export const usePokemonsStore = defineStore("pokemons", () => {
 
   const chainUrls = ref([]);
 
+  // find pokemons species urls in api data
   const iterate = (obj) => {
     Object.keys(obj).forEach((key) => {
       if (key == "url" && obj[key].includes("pokemon-species")) {
@@ -28,7 +29,7 @@ export const usePokemonsStore = defineStore("pokemons", () => {
     loading.value = true;
     chainUrls.value = [];
     data.value = [];
-    const txt = text.toLowerCase();
+    const txt = text.toLowerCase().replaceAll(" ", "-");
 
     api
       .get(`pokemon/${txt}`)

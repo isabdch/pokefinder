@@ -26,6 +26,8 @@ function fetchPokemons() {
 <template>
   <main>
     <div class="search-box">
+      <img src="../assets/pokemon.svg" alt="PokeFinder">
+
       <h2>Search for Pokemons!</h2>
 
       <InputComponent v-model:text="text" @fetchPokemons="fetchPokemons" />
@@ -54,6 +56,12 @@ main {
     padding: 20px;
     border: 4px solid $white;
     border-radius: 10px;
+
+    img {
+      width: 100%;
+      max-width: 80px;
+      margin-bottom: 20px;
+    }
 
     h2 {
       color: $yellow;
